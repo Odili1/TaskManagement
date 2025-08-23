@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35506.116 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagement.API", "TaskManagement\TaskManagement.API.csproj", "{498533A4-7532-44B9-9F1F-0685736D7617}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{3F9D2FDB-B6BC-41B8-87A1-510CBD039FA3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{2482250E-1847-47D1-8CDE-F7E129BE3BCC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{909FC699-04BE-452D-99ED-469B0B1F54A9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{DB61AF32-D263-4296-8AD7-F6DF55DD4018}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{498533A4-7532-44B9-9F1F-0685736D7617}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{498533A4-7532-44B9-9F1F-0685736D7617}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{498533A4-7532-44B9-9F1F-0685736D7617}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{498533A4-7532-44B9-9F1F-0685736D7617}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{498533A4-7532-44B9-9F1F-0685736D7617} = {3F9D2FDB-B6BC-41B8-87A1-510CBD039FA3}
+	EndGlobalSection
+EndGlobal
