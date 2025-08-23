@@ -5,3 +5,6 @@
 /.vs/TaskManagement
 /TaskManagement/obj/Debug/net8.0/TaskManagement.API.AssemblyInfo.cs
 /TaskManagement/obj/Debug/net8.0/TaskManagement.API.AssemblyInfoInputs.cache
+/TaskManagement.Domain/obj
+/TaskManagement.Infrastructure/obj
+/TaskManagement.Persistence/obj
