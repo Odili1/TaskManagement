@@ -8,3 +8,6 @@
 /TaskManagement.Domain/obj
 /TaskManagement.Infrastructure/obj
 /TaskManagement.Persistence/obj
+/TaskManagement.Domain/bin/Debug/net8.0
+/.vs/ProjectEvaluation
+/TaskManagement.Persistence/bin/Debug/net8.0
