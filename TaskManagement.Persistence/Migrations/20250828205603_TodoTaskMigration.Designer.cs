@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TaskManagement.Persistence;
 
@@ -11,9 +12,11 @@ using TaskManagement.Persistence;
 namespace TaskManagement.Persistence.Migrations
 {
     [DbContext(typeof(TaskManagementDbContext))]
-    partial class TaskManagementDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250828205603_TodoTaskMigration")]
+    partial class TodoTaskMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -82,9 +85,6 @@ namespace TaskManagement.Persistence.Migrations
                     b.Property<int>("PriorityStatus")
                         .HasColumnType("int");
 
-                    b.Property<int?>("ProjectId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
 
@@ -98,8 +98,6 @@ namespace TaskManagement.Persistence.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CreatedById");
-
-                    b.HasIndex("ProjectId");
 
                     b.ToTable("TodoTasks");
                 });
@@ -160,16 +158,7 @@ namespace TaskManagement.Persistence.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("TaskManagement.Domain.Projects.Project", null)
-                        .WithMany("TodoTask")
-                        .HasForeignKey("ProjectId");
-
                     b.Navigation("CreatedBy");
-                });
-
-            modelBuilder.Entity("TaskManagement.Domain.Projects.Project", b =>
-                {
-                    b.Navigation("TodoTask");
                 });
 #pragma warning restore 612, 618
         }

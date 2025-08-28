@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TaskManagement.Domain.TodoTasks;
 using TaskManagement.Domain.UserManagement;
 
 namespace TaskManagement.Domain.Projects
@@ -17,6 +18,6 @@ namespace TaskManagement.Domain.Projects
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public ProjectStatus ProjectStatus { get; set; } = ProjectStatus.Not_Started;
-        //public List<TodoTask> TodoTask { get; set; }
+        public List<TodoTask>? TodoTask { get; set; }
     }
 }
