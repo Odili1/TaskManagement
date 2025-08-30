@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TaskManagement.Domain.Projects;
@@ -20,6 +21,7 @@ namespace TaskManagement.API.Controllers
 
         // Create Operation
         [HttpPost]
+        [Authorize]
         public async Task<ActionResult> CreateProject(Project project)
         {
             if (!ModelState.IsValid)
@@ -53,6 +55,7 @@ namespace TaskManagement.API.Controllers
 
         // Fetch All Operation
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public async Task<List<Project>> GetAllProjects()
         {
             return await _context.Projects

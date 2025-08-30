@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TaskManagement.Domain.UserManagement;
@@ -35,6 +36,7 @@ namespace TaskManagement.API.Controllers
 
         // Fetch By Id Operation
         [HttpGet("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<User>> GetUserById(int id)
         {
             // Check if user is exist in the db
@@ -100,6 +102,7 @@ namespace TaskManagement.API.Controllers
 
         // Delete Operation
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteUser(int id)
         {
             var user = await _context.Users.FindAsync(id);
