@@ -4,21 +4,19 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TaskManagement.Domain.UserManagement;
 
-namespace TaskManagement.Domain.UserManagement
+namespace TaskManagement.Domain.Dtos
 {
-    public class User
+    public class UserRegistrationDto
     {
-        public int Id { get; set; }
         [Required(ErrorMessage = "Email is required")]
         [EmailAddress(ErrorMessage = "Email is Invlaid")]
-
         public string Email { get; set; } = default!;
         public string? PasswordHash { get; set; }
         public string FirstName { get; set; } = default!;
         public string LastName { get; set; } = default!;
         public AccountType AccountType { get; set; }
-        public UserStatus UserStatus { get; set; }
         public Gender Gender { get; set; }
     }
 }

@@ -13,7 +13,7 @@ namespace TaskManagement.Domain.Projects
         public int Id { get; set; }
         public string Title { get; set; } = default!;
         public string? Description { get; set; }
-        public User CreatedBy { get; set; } = default!;
+        public User? CreatedBy { get; set; } = default!;
         public int CreateById { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
